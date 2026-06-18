@@ -144,6 +144,27 @@ h3 { font-size: 1.22rem; line-height: 1.35; margin-bottom: 10px; }
   gap: 12px;
   margin-top: 28px;
 }
+.phone-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.phone-strip a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: .55rem .85rem;
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: 999px;
+  color: var(--white);
+  background: rgba(255, 255, 255, .08);
+  font-weight: 800;
+}
+.button-stack {
+  display: grid;
+  gap: 10px;
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -218,7 +239,7 @@ h3 { font-size: 1.22rem; line-height: 1.35; margin-bottom: 10px; }
   gap: 18px;
 }
 .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.contact-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.contact-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .feature-card, .product-card, .contact-card, .content-card, .promo-card, .gallery-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
