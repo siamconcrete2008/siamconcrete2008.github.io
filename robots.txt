@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://siamconcrete2008.com/sitemap.xml
