@@ -290,9 +290,12 @@ const phraseTranslations = {
   "ติดตามบน Facebook": "Follow on Facebook"
 };
 
-const reversePhraseTranslations = Object.fromEntries(
-  Object.entries(phraseTranslations).map(([thai, english]) => [english, thai])
-);
+const reversePhraseTranslations = {};
+Object.entries(phraseTranslations).forEach(([thai, english]) => {
+  if (!reversePhraseTranslations[english]) {
+    reversePhraseTranslations[english] = thai;
+  }
+});
 
 const languageButtons = document.querySelectorAll("[data-lang-switch]");
 const translatableItems = document.querySelectorAll("[data-i18n]");
