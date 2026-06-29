@@ -151,7 +151,7 @@ const translations = {
 const languageButtons = document.querySelectorAll("[data-lang-switch]");
 const translatableItems = document.querySelectorAll("[data-i18n]");
 
-if (languageButtons.length && translatableItems.length) {
+if (languageButtons.length) {
   const applyLanguage = (language) => {
     const dictionary = translations[language] || translations.th;
     document.documentElement.lang = language === "en" ? "en" : "th";

@@ -351,6 +351,18 @@ h3 { font-size: 1.22rem; line-height: 1.35; margin-bottom: 10px; }
   background: var(--orange);
   box-shadow: 0 10px 24px rgba(241, 90, 36, .28);
 }
+.nav-language-switch {
+  flex: 0 0 auto;
+  border-color: var(--line);
+  background: #fff7f3;
+}
+.nav-language-switch button {
+  min-width: 46px;
+  color: var(--ink);
+}
+.nav-language-switch button.is-active {
+  color: var(--white);
+}
 .about-trust-panel {
   border: 1px solid rgba(255, 255, 255, .2);
   border-radius: 28px;
@@ -546,7 +558,17 @@ h3 { font-size: 1.22rem; line-height: 1.35; margin-bottom: 10px; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 900px) {
+  .nav { gap: 10px; }
   .nav-toggle { display: block; }
+  .brand { min-width: 0; }
+  .nav-language-switch {
+    margin-left: auto;
+  }
+  .nav-language-switch button {
+    min-width: 42px;
+    min-height: 34px;
+    font-size: .9rem;
+  }
   .nav-menu {
     position: absolute;
     inset: 74px 16px auto;
@@ -575,7 +597,13 @@ h3 { font-size: 1.22rem; line-height: 1.35; margin-bottom: 10px; }
 @media (max-width: 640px) {
   .container { width: min(100% - 24px, 1120px); }
   .section { padding: 54px 0; }
-  .brand-text { font-size: .94rem; }
+  .brand-text {
+    max-width: 112px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .94rem;
+  }
   .hero { min-height: auto; padding-top: 26px; }
   h1 { font-size: 2.25rem; }
   .hero-subtitle { font-size: 1rem; }
@@ -589,6 +617,10 @@ h3 { font-size: 1.22rem; line-height: 1.35; margin-bottom: 10px; }
   .promo-card.large { grid-column: auto; }
   .cta-card { display: grid; padding: 24px; }
   .gallery-visual { min-height: 180px; }
+}
+
+@media (max-width: 380px) {
+  .brand-text { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
