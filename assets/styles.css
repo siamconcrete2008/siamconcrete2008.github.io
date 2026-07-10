@@ -630,3 +630,24 @@ h3 { font-size: 1.22rem; line-height: 1.35; margin-bottom: 10px; }
     animation-duration: .01ms !important;
   }
 }
+
+
+/* Local SEO v1 additions */
+.nav-menu { flex-wrap: wrap; justify-content: center; }
+.nav-menu a { padding-inline: .78rem; }
+.footer-address { font-style: normal; color: #dbe3ec; margin-top: 10px; max-width: 34rem; }
+.footer-hours { margin: 8px 0 0; color: #f8fafc; font-weight: 800; }
+.footer-note { width: min(1120px, calc(100% - 32px)); margin: 28px auto 0; color: #94a3b8; font-size: .92rem; }
+.local-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.local-card, .faq-card, .note-card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); padding: 24px; box-shadow: 0 10px 24px rgba(31, 41, 55, .06); }
+.local-card strong { display: block; margin-bottom: 8px; color: var(--orange-dark); }
+.faq-list { display: grid; gap: 12px; }
+.faq-list details { border: 1px solid var(--line); border-radius: 14px; background: var(--white); padding: 16px 18px; box-shadow: 0 8px 18px rgba(31, 41, 55, .04); }
+.faq-list summary { cursor: pointer; font-weight: 800; color: var(--ink); }
+.faq-list p { margin: 12px 0 0; color: var(--muted); }
+.breadcrumb-inline { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; color: #dbe3ec; font-weight: 700; }
+.breadcrumb-inline a { color: #ffffff; text-decoration: underline; text-underline-offset: 3px; }
+.product-card .card-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.product-card .card-actions a { display: inline-flex; align-items: center; min-height: 36px; }
+@media (max-width: 900px) { .local-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .local-grid { grid-template-columns: 1fr; } }
